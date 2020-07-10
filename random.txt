@@ -1,0 +1,139 @@
+css direction arrangement for measurements are top left bottom right
+
+
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Random Quote Machine</title>
+    <script></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="quote-box">
+          <div class="quote-text">
+          <i class="fa fa-quote-left"></i>
+          <i class="fa fa-quote-right"></i>
+          <span id="text"></span>
+          </div>
+        <div class="quote-author">
+          - <span id="author"></span>
+          </div>
+          <div class="buttons">
+            <button class="button" id="new-quote">New Quote</button>
+            <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
+        <i class="fa fa-tumblr"></i>
+      </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer"> <hr> By <a href="https://codepen.io/joshuah91/">Jos<span style="color:red">hu</span><span style="color:blue">a</span></a></div>
+  </body>
+</html>
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline
+}
+
+div {
+  postion: relative;
+  z-index: 2;
+}
+
+body {
+  background-color: #333;
+  color: #800080;
+  font-family: 'Raleway', sans-serif;
+  font-weigh: 400;
+  diplay: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 1em;
+  color: #fff;
+  a {
+    text-decoration: none;
+    font-weight: 1000;
+    margin: 10px;
+  }
+}
+#quote-box {
+  border-radius: 10px;
+  position: relative;
+  margin: 8% auto auto auto;
+  width: 450px;
+  padding: 40px 50px;
+  display:table;
+  background-color: #fff;
+  .quote-text {
+    i {
+      font-size: 1.0em;
+      margin: 0.4em;
+    }
+    text-align: center;
+    width: 450px;
+    height: auto;
+    clear: both;
+    font-weight: 500;
+    font-size: 1.75em;
+  }
+  .quote-author {
+    width: 450px;
+    height: auto;
+    clear: both;
+    padding-top: 20px;
+    font-size: 1em;
+    text-align: left;
+  }
+  .buttons {
+    width: 450px;
+    margin: auto;
+    display: block;
+    .button {
+      height: 38px;
+      border: solid 1px #333;
+      border-radius: 5px;
+      color: #fff;
+      background-color: #800080;
+      outline: none;
+      font-size: 1em;
+      padding: 8px 18px 6px 18px;
+      margin-top: 30px;
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+      &#tweet-quote, &#tumblr-quote {
+        float: right;
+        padding: 0px;
+        padding-top: 8px;
+        text-align: center;
+        font-size: 1.2em;
+        margin-left: 5px;
+        width: 40px;
+        height: 30px;
+      }
+      &#new-quote {
+        float: left;
+      }
+    }
+  }
+  }
