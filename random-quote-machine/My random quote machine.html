@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://127.0.0.1:5500/coding-experience/random-quote-machine/dist/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>CodePen - Random Quote Machine</title>
+  <link rel="stylesheet" href="./My random quote machine_files/font-awesome.min.css">
+<link rel="stylesheet" href="./My random quote machine_files/css"><link rel="stylesheet" href="./My random quote machine_files/style.css">
+
+</head>
+<body style="background-color: rgb(71, 46, 50); color: rgb(71, 46, 50);">
+<!-- partial:index.partial.html -->
+https://codepen.io/joshuah91/
+  
+    
+    <title>Random Quote Machine</title>
+    <script></script>
+  
+  
+    <div id="container">
+      <div id="quote-box">
+          <div class="quote-text" style="opacity: 1;">
+          <p><i class="fa fa-quote-left"> </i><span id="text">The battles that count aren’t the ones for gold medals. The struggles within yourself–the invisible battles inside all of us–that’s where it’s at.</span> <i class="fa fa-quote-right"> </i></p>
+          </div>
+        <div class="quote-author" style="opacity: 1;">
+          - <span id="author">Jesse Owens</span>
+          </div>
+          <div class="buttons">
+            <button class="button" id="new-quote" style="background-color: rgb(71, 46, 50);">New Quote</button>
+            <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank" style="background-color: rgb(71, 46, 50);">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a class="button" id="facebook-quote" title="Post this quote on tumblr!" target="_blank" style="background-color: rgb(71, 46, 50);">
+        <i class="fa fa-facebook"></i>
+      </a>
+            <a class="button" id="linkedin-quote" title="Post this quote on linkedin!" target="_blank" style="background-color: rgb(71, 46, 50);">
+        <i class="fa fa-linkedin"></i>
+      </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer"> <hr> By <a href="https://codepen.io/joshuah91/">Jos<span style="color:red">hu</span><span style="color:blue">a</span></a></div>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<!-- partial -->
+  
+<script src="./My random quote machine_files/jquery.min.js.download"></script>
+<script src="./My random quote machine_files/jquery-ui.min.js.download"></script><script src="./My random quote machine_files/script.js.download"></script>
+
+<!-- Code inject--></body></html>
