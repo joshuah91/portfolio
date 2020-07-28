@@ -47,7 +47,7 @@ css direction arrangement for measurements are top left bottom right
 }
 
 div {
-  postion: relative;
+  position: relative;
   z-index: 2;
 }
 
@@ -56,7 +56,7 @@ body {
   color: #800080;
   font-family: 'Raleway', sans-serif;
   font-weigh: 400;
-  diplay: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
