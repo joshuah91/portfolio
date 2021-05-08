@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open+Sans' 
+    type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+    crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" 
+    rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" 
+    rel="stylesheet"/>
+    <title>Joshua's Portfolio</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing:inherit;
+      }
+      @media (max-width: 75em) {
+        html {
+          font-size: 60%;
+        }
+      }
+
+      @media (max-width: 61.25em) {
+        html {
+          font-size: 58%;
+        }
+      }
+
+      @media (max-width: 28.75em) {
+        html {
+          font-size: 55%;
+        }
+      }
+      html {
+        font-size: 10px;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, 'Poppins' 'Raleway';
+        font-size: 1.6rem;
+        line-height: 1.5;
+        text-align: justify;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .name {
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding: 10px;
+        color:#f5deb3;
+        margin-top: 30px;
+        margin-bottom: auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .name h1 {
+        font-size: 10rem;
+        margin-top: 10%;
+      }
+      .name h4 {
+        font-size: 3rem;
+      }
+      .nav {
+        display: flex;
+        justify-content: flex-end;  
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        width: 100%;
+        background: #b90912;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+      }
+      .nav-list {
+        display: flex;
+        margin-right: 2rem;
+        font: menu;
+        color: whitesmoke;
+      }
+
+      @media (max-width: 28.75em) {
+        .nav {
+          justify-content: center;
+        }
+        .nav-list {
+          margin: 0 1rem;
+        }
+      }
+
+      .nav-list a {
+        display: block;
+        font-size: 2rem;
+        padding: 1rem;
+        text-decoration: none;
+        color: whitesmoke;
+      }
+
+      .nav-list a:hover{
+        background-color: wheat;
+        color: #696666;
+      }
+      .row {
+        display: flex;
+        width: 99%;
+        flex-direction: row;
+        align-items: space-around;
+        border: solid 1px wheat;
+        margin-top: 30px;
+        margin-left: 5px;
+        border-radius: 10px;
+        background-color: rgba(105, 102, 136, 0.5);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:wheat;
+      }
+
+      @media screen and (max-width: 600px) {
+        .row {
+          width: 100%;
+        }
+      }
+      .info {
+        flex: 30%;
+        padding: 20px;
+      }
+      .statement {
+        flex: 40%;
+        padding: 20px;
+      }
+      .curriculum {
+        flex: 30%;
+        padding: 20px;
+      }
+      .skill {
+        margin: 30px;
+        margin-left: 25%;
+        border: solid 2px #696688;
+        
+        background-color: #f5deb3;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 20px;
+        padding: 20px;
+        width: 50%;
+        color: #696688;
+        font-family: 'Poppins';
+        font-weight: 700;
+        box-shadow: 0 4px 8px 0 rgb(112, 67, 67, 1);
+        transition: 0.3s;
+      }
+      .skill i {
+        float: right;
+        margin-top: -15px;
+        margin-right: -15px;
+        color: #b90912;
+        
+      }
+      .skill ul {
+        list-style: disc;
+        margin-left: 20px;
+        
+      }
+      /* .course {
+        display: flex;
+        width: 99%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content:space-evenly;
+        margin: solid 20px;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 10px;
+        background-color:#696688;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:wheat;
+        background-image: linear-gradient(62deg, #181719 0%, #696688 100%);
+      }
+      @media screen and (max-width: 600px) {
+        .course {
+          width: 100%;
+        }
+      }
+      .school {
+        flex: 20%;
+        padding: 20px;
+      }
+      .online {
+        flex: 30%;
+        padding: 20px;
+      }
+      .eduhead {
+        margin: auto;
+        margin-top: -10px;
+        width: 100%;
+        text-align: center;
+        border: ridge 1px white;
+        background: #b90912;
+      }
+      .expehead {
+        margin: auto;
+        margin-top: -10px;
+        width: 100%;
+        text-align: center;
+        border: ridge 1px white;
+        background: #b90912;
+      }
+      .history {
+        display: flex;
+        width: 99%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: space-around;
+        margin: solid 20px;
+        margin-top: -20px;
+        margin-left: 5px;
+        border-radius: 10px;
+        background-color:#696688;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:wheat;
+        background-image: linear-gradient(62deg, #181719 0%, #696688 100%);
+        font-size: 1.8rem;
+      }
+      @media screen and (max-width: 600px) {
+        .history {
+          width: 100%;
+        }
+      }
+      .one {
+        flex: 50%;
+        padding: 20px;
+      }
+      .two {
+        flex: 50%;
+        padding: 20px;
+      }
+      .three {
+        flex: 50%;
+        padding: 20px;
+      } */
+      .linkhead {
+        margin: auto;
+        margin-top: 5px;
+        width: 100%;
+        text-align: center;
+        border: solid 1px white;
+        background: #b90912;
+        color:#f5deb3;
+      }
+      .link {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: space-around;
+        margin-top: auto;
+        margin-left: auto;
+        background-color:rgba(105, 102, 136, 0.5);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:wheat;
+        font-size: 1.8rem;
+      }
+      @media screen and (max-width: 600px) {
+        .link {
+          width: 100%;
+        }
+      }
+      .a {
+        flex: 25%;
+        padding: 20px;
+      }
+      .a a {
+        color: wheat;
+        padding: 5px;
+        margin-left: -5px;
+      }
+      .a a:hover {
+        background-color: #698855;
+      }
+      .b {
+        flex: 25%;
+        padding: 20px;
+      }
+      .b a {
+        color: wheat;
+        padding: 5px;
+        margin-left: -5px;
+      }
+      .b a:hover {
+        background-color: #698855;
+      }
+      .c {
+        flex: 25%;
+        padding: 20px;
+      }
+      .c a {
+        color: wheat;
+        padding: 5px;
+        margin-left: -5px;
+      }
+      .c a:hover {
+        background-color: #698855;
+      }
+      .app {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: space-around;
+        background-color:rgba(105, 102, 136, 0.5);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:wheat;
+        font-size: 1.8rem;        
+      }
+      .app a {
+        flex-basis: 25%;
+        /* padding: 10px; */
+        margin: 30px;
+        color: wheat;
+        border: solid 1px #698855;
+        text-align: center;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+        transition: 0.3s;
+      }
+      .app a:hover {
+        background-color: #698855;
+        box-shadow: 0 16px 32px 0 rgba(0,0,0,1);
+      }
+    </style>
+  </head>
+  <body>    
+    <div class="main">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li>
+            <a href="#profile">Profile</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <!-- <li>
+            <a href="#experience">Experience</a>
+          </li>
+          <li>
+            <a href="#education">Education</a>
+          </li> -->
+          <li>
+            <a href="#links">Links</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <div class="name">
+          <h1>Joshua Balogun</h1>
+          <h4>Hi,<br> I'm a Web Developer</h4>
+        </div>
+      </section>
+      <section id="profile">
+        <div class="row">
+          <div class="info">
+            <h2>Info</h2>
+            <p><strong>Email:</strong> joshplexus8@gmail.com </p>
+            <p><strong>Phone:</strong> 08132775979 </p>
+            <p><strong>Location:</strong> Lagos, Nigeria. </p>
+            <p><strong>Nationality:</strong> Nigerian </p>
+            <p><strong>Languages:</strong> English, Yoruba </p>
+            <p><strong>Hobbies:</strong> Reading, Swimming, Sports, 
+              Music, Social Media(twitter dev community)
+            </p>
+          </div>
+          <div class="statement">
+            <h2>Profile</h2>
+            <p>
+              A learned Web Developer willing to learn and improve my skills at all times. 
+              Knowledgeable in user interface, testing and debugging processes. 
+              Equipped with diverse and promising skill-set. 
+              Proficient in an assortment of programming languages including HTML, CSS, Sass, 
+              Javascript, Bootstrap, jQuery, React. proficient in use of NPM, NODE, GIT etc 
+              Able to effectively self-manage during independent projects, 
+              as well as collaborate in a team setting.
+            </p>
+          </div>
+        </div>
+        <!-- <div class="curriculum">
+          <h2>Extra Curricular Activities</h2>
+          <p><strong>President, BAMSSA, University of Benin, 2014</strong></br>
+            Student Leader, Basic Medical Sciences Student Association in the University of Benin.</p>
+            <br>
+            <p><strong>President, FESSU, University of Benin, 2014</strong></br>
+              Student Leader, Federation of Ekiti State Student Union in the University of Benin.</p>
+        </div> -->
+      </section>
+      <section id="skills">
+        <div class="skill">
+          <h2>SKILLS<i class="fa fa-award x16"></i></h2>
+          <ul>
+            <li>
+              Programming(HTML, CSS, Javascript, Sass, jQuery, Bootstrap, React & Redux)
+            </li>
+            <li>
+              Strong Leadership Skills
+            </li>
+            <li>
+              Database Management
+            </li>
+            <li>
+              Adaptability
+            </li>
+            <li>
+              Critical Thinking and Problem Solving
+            </li>
+            <li>
+              Interpersonal Skills
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- <section id="experience">
+        <div class="expehead">
+          <h2>EMPLOYMENT HISTORY</h2>
+        </div>
+        <br>
+        <div class="history">
+          <div class="one">
+            <div>
+              <h3>Frontend Web Developer, Excellent and Strategic Solutions</h3>
+              <h4>Lagos</h4>
+            </div></br>
+            <p>July, 2020 - October, 2020</p><br>
+            <ul>
+              <li>
+                •	Part of the Frontend development team and also member of the full production team;
+              </li>
+              <li>
+                •	Design web pages, app components;
+              </li>
+              <li>
+                •	Execute UI and Functionalities;
+              </li>
+              <li>
+                •	Render pages, links, charts, tables etc;
+              </li>
+              <li>
+                •	Integrate major changes, commit via git;
+              </li>
+            </ul>
+          </div>
+          <div class="two">
+            <div>
+              <h3>Solution Consultant, Finnblue Technologies Ltd</h3>
+              <h4>Lagos</h4>
+            </div></br>
+            <p>June, 2018 - November, 2019</p></br>
+            <ul>
+              <li>
+                •	Research for potential Hot Leads and Prospective Clients;
+              </li>
+              <li>
+                •	Prospecting of Leads and Potential Clients;
+              </li>
+              <li>
+                •	Assessment of Client Properties and Portfolios;
+              </li>
+              <li>
+                •	Worked well independently and within a team setting even as team lead;
+              </li>
+              <li>
+                •	Effectively translated client requirements into application designs and systems requirements;
+              </li>
+              <li>
+                •	Provision of Solution Structures to Clients and Management of Client Account;
+              </li>
+              <li>
+                •	Installation and Consultation;
+              </li>
+            </ul>
+          </div>
+          <div class="three">
+            <div>
+              <h3>Corps Member, National Youth Service Corps</h3>
+              <h4>Birnin-Kebbi, Kebbi State</h4>
+            </div></br>
+            <p>May, 2015 - April, 2016</p></br>
+            <ul>
+              <li>
+                •	Teach Science and Biology at secondary school learning;
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+      <!-- <section id="education">
+        <div class="eduhead">
+          <h2>EDUCATION</h2>
+        </div>
+        <div class="course">
+          <div class="school">
+            <h3>Bsc Phsiology, University of Benin</h3>
+            <h4>Benin-City, Edo State</h4>
+            <br>
+            <p>2010 - 2014</p></br>
+            <br>
+            <h3>WASSCE, Awodi Ora Senior Secondary School</h3>
+            <h4>Ajegunle, Lagos</h4>
+            <br>
+            <p>2000 - 2006</p></br>
+          </div>
+          <br>
+          <div class="online">
+            <h2>Courses</h2>
+            <div>
+              <h3>Frontend Libraries Certification</h3>
+              <h4>FreeCodeCamp</h4>
+              <br>
+              <p>July 2020</p>
+            </div><div>
+              <h3>Javascript Algorithms and Data Structures Certification</h3>
+              <h4>FreeCodeCamp</h4>
+              <br>
+              <p>June 2020</p>
+            </div>
+            <div>
+              <h3>Responsive Web Design Certification</h3>
+              <h4>FreeCodeCamp</h4>
+              <br>
+              <p>September 2019</p>
+            </div>
+            <div>
+              <h3>Critical Thinking and Problem Solving Skills Certification</h3>
+              <h4>AlmondSprings Consulting</h4>
+              <br>
+              <p>May 2019</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section id="links">
+        <div class="linkhead">
+          <h2>LINKS</h2>
+        </div>
+        <div class="link">
+          <div class="a">
+            <p><i class="fab fa-codepen"></i><strong>Codepen</strong></p>
+            <a href="https://codepen.io/joshuah91/" target="_blank">@joshuah91</a>
+          </div>
+          <br>
+          <div class="b">
+            <p><i class="fab fa-linkedin"></i><strong>Linkedin</strong></p>
+            <a href="https://www.linkedin.com/in/joshua-balogun-807b4318a" target="_blank">Joshua Balogun</a>
+          </div>
+          <br>
+          <div class="c">
+            <p><i class="fab fa-github"></i><strong>Github</strong></p>
+            <a href="https://github.com/joshuah91" target="_blank">@joshuah91</a>
+          </div>
+        </div>
+        <div>
+          <h2 
+          style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+          font-size: 3rem;
+          color: wheat;
+          padding: 20px;
+          border: solid 1px rgba(105, 102, 136, 0.5);
+          border-bottom: hidden;
+          border-left: hidden;
+          border-right: hidden;
+          text-align: center;
+          background-color:rgba(105, 102, 136, 0.5);
+          width: 100%;">APPS</h2>
+        </div>
+        <div class="app">
+            <a href="https://jaydrumpad.netlify.app" target="_blank">
+              <img 
+              src="drumpad.PNG" 
+              alt="drumpad app" width="350" height="185" 
+              ><br>Jay Drumpad</a>
+            <a href="https://jayquotemachine.netlify.app" target="_blank">
+              <img 
+              src="quote.PNG" 
+              alt="quote Machine app" width="350" height="185" 
+              ><br>Jay Quote Machine</a>
+            <a href="https://jayjavascriptcalculator.netlify.app" target="_blank">
+              <img 
+              src="calc.PNG" 
+              alt="calculator app" width="350" height="185" 
+              ><br>Jay Javascript Calculator</a>
+            <a href="https://iqstore.ivyarc.com/" target="_blank">
+              <img 
+              src="iqstore.jpg" 
+              alt="iqstore app" width="350" height="185"><br>IQStore LMS</a>
+            <a href="https://carrotsuite.com.ng/" target="_blank">
+              <img 
+              src="carrotsuite.png" 
+              alt="carrotsuite app" width="350" height="185"><br>carrotsuite ERP</a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
