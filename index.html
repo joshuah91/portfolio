@@ -99,7 +99,7 @@
         color: whitesmoke;
       }
 
-      @media (max-width: 28.75em) {
+      @media screen and (max-width: 380px) {
         .nav {
           justify-content: center;
         }
@@ -134,9 +134,13 @@
         color:wheat;
       }
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 400px) {
         .row {
           width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          color: #000;
         }
       }
       .info {
